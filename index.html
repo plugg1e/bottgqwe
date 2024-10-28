@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notcoin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Notcoin</h1>
+        <div class="balance">
+            <p>Ваш баланс: <span id="balance">0</span> NTC</p>
+        </div>
+        <button id="tapButton">Нажми меня!</button>
+        <div class="tabs">
+            <button class="tab-button" onclick="openTab('upgrades')">Улучшения</button>
+            <button class="tab-button" onclick="openTab('passive')">Пассивный заработок</button>
+        </div>
+        <div id="upgrades" class="tab-content">
+            <h2>Улучшения</h2>
+            <div class="upgrade" id="upgrade1">
+                <p>Улучшение 1: +1 NTC за нажатие</p>
+                <button onclick="buyUpgrade(1)">Купить за 10 NTC</button>
+            </div>
+            <div class="upgrade" id="upgrade2">
+                <p>Улучшение 2: +5 NTC за нажатие</p>
+                <button onclick="buyUpgrade(2)">Купить за 50 NTC</button>
+            </div>
+            <div class="upgrade" id="upgrade3">
+                <p>Улучшение 3: +10 NTC за нажатие</p>
+                <button onclick="buyUpgrade(3)">Купить за 100 NTC</button>
+            </div>
+        </div>
+        <div id="passive" class="tab-content" style="display:none;">
+            <h2>Пассивный заработок</h2>
+            <div class="upgrade" id="passive1">
+                <p>Пассив 1: +1 NTC в секунду</p>
+                <button onclick="buyPassive(1)">Купить за 20 NTC</button>
+            </div>
+            <div class="upgrade" id="passive2">
+                <p>Пассив 2: +5 NTC в секунду</p>
+                <button onclick="buyPassive(2)">Купить за 100 NTC</button>
+            </div>
+            <div class="upgrade" id="passive3">
+                <p>Пассив 3: +10 NTC в секунду</p>
+                <button onclick="buyPassive(3)">Купить за 200 NTC</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
